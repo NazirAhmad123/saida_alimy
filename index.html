@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saida Alimy</title>
+  <meta name="description" content="Saida Alimy — Finance Professional and Humanitarian Dedicated to Empowering Afghanistan" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lora:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+  --color-primary: #2a9d8f;
+  --color-accent: #f4a261;
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --text: #264653;
+  --muted: #6b7280;
+  --radius: 10px;
+  --max-width: 1100px;
+  --spacing: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lora", serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing);
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.headline {
+  flex: 1;
+  min-width: 260px;
+}
+
+.name {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.tag {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.cta {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--color-primary);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.18s;
+}
+
+.btn:hover {
+  background: #1a7a6f;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(26, 32, 44, 0.15);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing);
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--surface);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.about {
+  font-size: 15px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.skill:hover {
+  background: var(--color-accent);
+  color: var(--text);
+}
+
+.job {
+  border-left: 3px solid rgba(0, 0, 0, 0.08);
+  padding-left: 10px;
+}
+
+.job h3 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badge {
+  background: var(--color-accent);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 60px;
+  text-align: center;
+  display: inline-block;
+}
+
+blockquote {
+  margin: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  background: white;
+}
+
+textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(42, 157, 143, 0.12);
+}
+
+button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  font-size: 13px;
+  color: var(--muted);
+  min-height: 22px;
+}
+
+.form-status .success {
+  color: #125a32;
+  background: #e6f9ed;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.form-status .error {
+  color: #7a261b;
+  background: #fdecea;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: var(--spacing);
+}
+
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">SA</div>
+      <div class="headline">
+        <h1 class="name">Saida Alimy</h1>
+        <div class="tag">Finance assistant, WOW Focal Point <br />International Rescue Committee</div>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn-ghost" href="#experience">Experience</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="content">
+        <section class="card">
+          <h2>About</h2>
+          <p class="about">
+            I’m Saida Alimy, a finance professional dedicated to making a difference in Afghanistan through humanitarian work. With a strong foundation in financial systems and a passion for impactful projects, I’ve worked with the International Rescue Committee (IRC) and Ruhullah Afghan Europe Logistic Services, mastering financial management, compliance, and team collaboration. My goal is to drive positive change by combining analytical expertise with a commitment to empowering communities. When I’m not crunching numbers, I’m exploring new cultures, writing poetry, or staying active through sports.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <span class="skill">Financial Management</span>
+            <span class="skill">Compliance & Reporting</span>
+            <span class="skill">ERP Systems (INTEGRA, QuickBooks)</span>
+            <span class="skill">Microsoft Office Suite</span>
+            <span class="skill">Adobe Suite</span>
+            <span class="skill">Team Leadership</span>
+            <span class="skill">Time Management</span>
+            <span class="skill">Pashto (Native)</span>
+            <span class="skill">English (Professional)</span>
+            <span class="skill">Persian (Native)</span>
+          </div>
+        </section>
+
+        <section id="experience" class="card">
+          <h2>Selected Experience</h2>
+          <article class="job">
+            <h3>Finance Assistant — International Rescue Committee (IRC)</h3>
+            <div class="meta">Aug 2023 — Jun 2025 — Kunduz, Afghanistan</div>
+            <p>Managed financial compliance, processed payments in INTEGRA, and prepared budget reports. Ensured timely vendor payments and maintained accurate financial records, supporting IRC’s humanitarian mission.</p>
+          </article>
+          <article class="job">
+            <h3>Finance Intern — International Rescue Committee (IRC)</h3>
+            <div class="meta">Nov 2022 — Dec 2022 — Kunduz, Afghanistan</div>
+            <p>Supported daily transactions, tax reporting, and grant audits. Assisted in clearing payments and maintaining organized financial documentation.</p>
+          </article>
+          <article class="job">
+            <h3>Finance Officer — Ruhullah Afghan Europe Logistic Services</h3>
+            <div class="meta">Jan 2021 — Oct 2022 — Kabul, Afghanistan</div>
+            <p>Oversaw accounts, budgets, and cash flows. Streamlined procurement processes and ensured compliance with financial regulations, enhancing operational efficiency.</p>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Impact Stories</h2>
+          <blockquote>“Saida’s dedication to financial accuracy and humanitarian goals is inspiring. Her work ethic and attention to detail make her an invaluable asset.” — Munir Ahmad Fetrat, Finance Officer, IRC</blockquote>
+          <blockquote>“Saida’s professionalism and teamwork shine in every project. She’s a reliable colleague who consistently delivers.” — Manizha Rahimi, HR Admin Assistant, IRC</blockquote>
+          <blockquote>“Saida’s financial expertise and commitment to excellence elevated our operations significantly.” — Ruhullah Pirzada, Owner, Ruhullah Afghan Europe Logistic Services</blockquote>
+        </section>
+      </div>
+
+      <aside>
+        <section id="contact" class="card">
+          <h2>Contact</h2>
+          <ul class="contact-list">
+            <li><span class="badge">Email</span> <a href="mailto:saidaalimy100@gmail.com">saidaalimy100@gmail.com</a></li>
+            <li><span class="badge">Phone</span> +93 790302435</li>
+            <li><span class="badge">LinkedIn</span> <a href="https://linkedin.com/in/saida-alimy-b84732333">saida-alimy-b84732333</a></li>
+            <li><span class="badge">Location</span> Kunduz, Afghanistan</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Message Me</h2>
+          <form id="contact-form" novalidate>
+            <input type="text" name="_gotcha" style="display:none">
+            <input name="name" type="text" placeholder="Your name" required>
+            <input name="email" type="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+              <button id="submit-btn" type="submit">Send</button>
+              <div id="form-status" class="form-status" aria-live="polite"></div>
+            </div>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>Education & Certs</h2>
+          <p><strong>BBA:</strong> Afghan Women International Online University (Mar 2025 — Present)</p>
+          <p><strong>Bachelor of English Language & Literature:</strong> Kunduz University (Mar 2016 — Apr 2021)</p>
+          <p><strong>Selected:</strong> QuickBooks Online, Financial Management Essentials, Procurement Process, Project Management, Accounting 101, Bookkeeping, Corporate Finance & Treasury, and more from USAID, IRC, DisasterReady.org, INCEIF University, The Open University, and THE ACT.</p>
+        </section>
+
+        <section class="card">
+          <h2>References</h2>
+          <p><strong>Munir Ahmad Fetrat</strong>, Finance Officer, IRC — munir.fetrat@gmail.com, +93 784249494</p>
+          <p><strong>Manizha Rahimi</strong>, HR Admin Assistant, IRC — manizharahimi536@gmail.com, +93 795752767</p>
+          <p><strong>Ruhullah Pirzada</strong>, Owner, Ruhullah Afghan Europe Logistic Services — raelscltd@gmail.com, +93 700541009</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      Available for collaboration on humanitarian finance, NGO services, and impactful projects in Afghanistan.
+    </footer>
+  </div>
+  <script>
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xovlyvgp"; // Replace with actual Formspree ID if available
+const form = document.getElementById("contact-form");
+const statusEl = document.getElementById("form-status");
+const submitBtn = document.getElementById("submit-btn");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  statusEl.textContent = "";
+  const fd = new FormData(form);
+  if (fd.get("_gotcha")) return;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        Accept: "application/json"
+      },
+      body: fd
+    });
+    if (res.ok) {
+      statusEl.innerHTML =
+        '<span class="success">Thanks — message sent!</span>';
+      form.reset();
+    } else {
+      const data = await res.json().catch(() => null);
+      if (data && data.errors) {
+        statusEl.innerHTML =
+          '<span class="error">' +
+          data.errors.map((e) => e.message).join(", ") +
+          "</span>";
+      } else {
+        statusEl.innerHTML =
+          '<span class="error">Submission failed — try later.</span>';
+      }
+    }
+  } catch {
+    statusEl.innerHTML =
+      '<span class="error">Network error — try later.</span>';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send";
+    setTimeout(() => {
+      statusEl.textContent = "";
+    }, 8000);
+  }
+});
+document.querySelectorAll('a[href^="#"]').forEach((a) =>
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  })
+);
+
+  </script>
+
+</body>
+
+</html>
