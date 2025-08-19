@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saida Alimy | Finance & Humanitarian Professional</title>
+  <meta name="description" content="Saida Alimy is a finance professional and humanitarian dedicated to empowering communities in Afghanistan. View her experience, skills, and contact information." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lora:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    /* -------------------------------------------------------------------------- */
+    /* CSS Variables */
+    /* -------------------------------------------------------------------------- */
+    :root {
+      /* Colors */
+      --color-primary: #2a9d8f;
+      --color-accent: #f4a261;
+      --bg: #f9fafb;
+      --surface: #ffffff;
+      --text: #264653;
+      --muted: #6b7280;
+      /* Layout & Spacing */
+      --radius: 12px;
+      --max-width: 1200px;
+      --spacing: 2.5rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --surface: #1e1e1e;
+        --text: #e0e0e0;
+        --muted: #a0a0a0;
+        --color-primary: #52c5b7;
+        --color-accent: #ffb77d;
+      }
+    }
+
+    [data-theme="light"] {
+      --bg: #f9fafb;
+      --surface: #ffffff;
+      --text: #264653;
+      --muted: #6b7280;
+      --color-primary: #2a9d8f;
+      --color-accent: #f4a261;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --surface: #1e1e1e;
+      --text: #e0e0e0;
+      --muted: #a0a0a0;
+      --color-primary: #52c5b7;
+      --color-accent: #ffb77d;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Base Styles */
+    /* -------------------------------------------------------------------------- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Lora", serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: var(--spacing) 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--color-primary);
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      text-decoration: none;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Accessibility utility class */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Progress Bar */
+    /* -------------------------------------------------------------------------- */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+      width: 0%;
+      z-index: 100;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 5px var(--color-primary);
+      }
+
+      50% {
+        box-shadow: 0 0 15px var(--color-accent);
+      }
+
+      100% {
+        box-shadow: 0 0 5px var(--color-primary);
+      }
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Floating Buttons */
+    /* -------------------------------------------------------------------------- */
+    .floating-buttons {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 50;
+    }
+
+    .floating-buttons button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      color: var(--muted);
+      font-size: 1.25rem;
+      box-shadow: none;
+      transition: color 0.3s ease;
+    }
+
+    .floating-buttons button:hover {
+      background: none;
+      color: var(--color-primary);
+    }
+
+    [data-theme="dark"] .floating-buttons button {
+      color: var(--muted);
+    }
+
+    [data-theme="dark"] .floating-buttons button:hover {
+      color: var(--color-primary);
+    }
+
+    .back-to-top {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Hero Section */
+    /* -------------------------------------------------------------------------- */
+    .hero {
+      background: var(--color-primary);
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .headline {
+      max-width: 600px;
+    }
+
+    .name {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .tag {
+      margin: 0.5rem 0 0;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    .cta {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: white;
+      color: var(--color-primary);
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease-in-out;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] .btn {
+      background: var(--surface);
+      color: var(--color-primary);
+    }
+
+    [data-theme="dark"] .btn:hover {
+      background: #333;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    [data-theme="dark"] .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-ghost:hover {
+      border-color: white;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn:focus,
+    .btn-ghost:focus,
+    input:focus,
+    textarea:focus,
+    .floating-buttons button:focus {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    [aria-invalid="true"] {
+      border-color: red;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Main Content */
+    /* -------------------------------------------------------------------------- */
+    main {
+      padding: var(--spacing) 2rem;
+      display: flex;
+      gap: var(--spacing);
+    }
+
+    @media (max-width: 900px) {
+      main {
+        flex-direction: column;
+        padding: var(--spacing) 1rem;
+      }
+    }
+
+    @media (min-width: 901px) {
+      main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    .content,
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    aside {
+      position: static;
+    }
+
+    .card {
+      background: var(--surface);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section-divider {
+      position: relative;
+      height: 0;
+      margin-top: var(--spacing);
+      margin-bottom: var(--spacing);
+    }
+
+    .section-divider::before {
+      content: '';
+      position: absolute;
+      top: -1.5rem;
+      left: -2rem;
+      width: calc(100% + 4rem);
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.05) 20%, rgba(0, 0, 0, 0.05) 80%, transparent);
+    }
+
+    [data-theme="dark"] .section-divider::before {
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 80%, transparent);
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      color: var(--text);
+      font-weight: 700;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h2 .emoji {
+      font-size: 1.25rem;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+
+    [data-theme="dark"] h2 {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .about {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill {
+      background: rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      color: #4b5563;
+      transition: all 0.2s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      white-space: nowrap;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    [data-theme="dark"] .skill {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e0e0e0;
+      box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .skill:hover {
+      background: var(--color-accent);
+      color: var(--text);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    [data-theme="dark"] .skill:hover {
+      background: var(--color-accent);
+      color: #121212;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+    }
+
+    .job {
+      position: relative;
+      padding-left: 1.75rem;
+      padding-bottom: 1.5rem;
+      border-left: 2px solid rgba(0, 0, 0, 0.1);
+      margin-left: 0.75rem;
+    }
+
+    .job:last-child {
+      border-left: none;
+      padding-bottom: 0;
+    }
+
+    .job::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      border: 2px solid var(--surface);
+    }
+
+    [data-theme="dark"] .job {
+      border-left-color: rgba(255, 255, 255, 0.1);
+    }
+
+    [data-theme="dark"] .job::before {
+      border-color: var(--surface);
+    }
+
+    .job h3 {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    .job p {
+      font-size: 0.95rem;
+      margin: 0.75rem 0 0;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    /* NEW: Styles for the contact icons */
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      stroke: var(--text);
+      /* The icon color matches the main text color */
+      flex-shrink: 0;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+
+    .contact-list.visible li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .contact-list.visible li:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+
+    .contact-list.visible li:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    .contact-list.visible li:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+
+    .badge {
+      background: var(--color-accent);
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      min-width: 65px;
+      text-align: center;
+      display: inline-block;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    [data-theme="dark"] .badge {
+      /* NEW: Change color to dark in dark mode to contrast with accent color */
+      color: #264653;
+    }
+
+    .contact-list a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-list a:hover {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+
+    .testimonials-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .quote-card {
+      padding: 1rem;
+      background: var(--bg);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .quote-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 0 10px var(--color-accent);
+    }
+
+    [data-theme="dark"] .quote-card {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #252525;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+    }
+
+    [data-theme="dark"] .quote-card:hover {
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1), 0 0 10px var(--color-accent);
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 0;
+      font-style: italic;
+      position: relative;
+    }
+
+    blockquote::before {
+      content: "“";
+      position: absolute;
+      top: -0.5rem;
+      left: -0.5rem;
+      font-size: 3rem;
+      color: var(--color-accent);
+      line-height: 1;
+      opacity: 0.5;
+    }
+
+    blockquote p {
+      margin: 0;
+    }
+
+    cite {
+      display: block;
+      margin-top: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input,
+    textarea {
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      background: white;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      color: var(--text);
+    }
+
+    [data-theme="dark"] input,
+    [data-theme="dark"] textarea {
+      background-color: #333;
+      border-color: #444;
+      color: var(--text);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--muted);
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.15);
+    }
+
+    [data-theme="dark"] input:focus,
+    [data-theme="dark"] textarea:focus {
+      box-shadow: 0 0 0 3px rgba(82, 197, 183, 0.25);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background: #1a7a6f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] button:hover {
+      background: #46b7ac;
+    }
+
+    button[disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .form-status {
+      font-size: 0.9rem;
+      color: var(--muted);
+      min-height: 22px;
+      display: flex;
+      align-items: center;
+    }
+
+    .form-status .success {
+      color: #125a32;
+      background: #e6f9ed;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    [data-theme="dark"] .form-status .success {
+      background: #0e3d23;
+      color: #c4e4c9;
+    }
+
+    .form-status .error {
+      color: #7a261b;
+      background: #fdecea;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    [data-theme="dark"] .form-status .error {
+      background: #4c1a16;
+      color: #f1b3af;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Footer & Top button */
+    /* -------------------------------------------------------------------------- */
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      padding: 1.5rem;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Animations */
+    /* -------------------------------------------------------------------------- */
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="progress-bar"></div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="floating-buttons">
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+    <button id="theme-toggle" aria-label="Toggle light and dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="container">
+    <div class="hero fade-in-on-scroll">
+      <div class="headline">
+        <h1 class="name">Saida Alimy </h1>
+        <p class="tag">Finance Assistant, WOW Focal Point at International Rescue Committee</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn-ghost" href="#experience">Experience</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <div class="content">
+        <section class="card fade-in-on-scroll" aria-labelledby="about-heading">
+          <h2 id="about-heading"><span class="emoji">✨</span> About</h2>
+          <p class="about">
+            I’m Saida Alimy, a finance professional dedicated to making a difference in Afghanistan through humanitarian work. With a strong foundation in financial systems and a passion for impactful projects, I’ve worked with the International Rescue Committee (IRC) and Ruhullah Afghan Europe Logistic Services, mastering financial management, compliance, and team collaboration. My goal is to drive positive change by combining analytical expertise with a commitment to empowering communities. When I’m not crunching numbers, I’m exploring new cultures, writing poetry, or staying active through sports.
+          </p>
+        </section>
+
+        <section class="card fade-in-on-scroll" aria-labelledby="skills-heading">
+          <h2 id="skills-heading"><span class="emoji">⚙️</span> Skills</h2>
+          <ul class="skills" role="list">
+            <li class="skill" role="listitem">Financial Management</li>
+            <li class="skill" role="listitem">Compliance & Reporting</li>
+            <li class="skill" role="listitem">ERP Systems (INTEGRA, QuickBooks)</li>
+            <li class="skill" role="listitem">Microsoft Office Suite</li>
+            <li class="skill" role="listitem">Adobe Suite</li>
+            <li class="skill" role="listitem">Team Leadership</li>
+            <li class="skill" role="listitem">Time Management</li>
+            <li class="skill" role="listitem">Pashto (Native)</li>
+            <li class="skill" role="listitem">English (Professional)</li>
+            <li class="skill" role="listitem">Persian (Native)</li>
+          </ul>
+        </section>
+
+        <section id="experience" class="card fade-in-on-scroll" aria-labelledby="experience-heading">
+          <h2 id="experience-heading"><span class="emoji">💼</span> Selected Experience</h2>
+          <article class="job">
+            <h3>Finance Assistant — International Rescue Committee (IRC)</h3>
+            <p class="meta">Aug 2023 — Jun 2025 — Kunduz, Afghanistan</p>
+            <p>Managed financial compliance, processed payments in INTEGRA, and prepared budget reports. Ensured timely vendor payments and maintained accurate financial records, supporting IRC’s humanitarian mission.</p>
+          </article>
+          <article class="job">
+            <h3>Finance Intern — International Rescue Committee (IRC)</h3>
+            <p class="meta">Nov 2022 — Dec 2022 — Kunduz, Afghanistan</p>
+            <p>Supported daily transactions, tax reporting, and grant audits. Assisted in clearing payments and maintaining organized financial documentation.</p>
+          </article>
+          <article class="job">
+            <h3>Finance Officer — Ruhullah Afghan Europe Logistic Services</h3>
+            <p class="meta">Jan 2021 — Oct 2022 — Kabul, Afghanistan</p>
+            <p>Oversaw accounts, budgets, and cash flows. Streamlined procurement processes and ensured compliance with financial regulations, enhancing operational efficiency.</p>
+          </article>
+        </section>
+
+        <section class="card fade-in-on-scroll" aria-labelledby="testimonials-heading">
+          <h2 id="testimonials-heading"><span class="emoji">💬</span> Testimonials</h2>
+          <div class="testimonials-container">
+            <div class="quote-card">
+              <blockquote>
+                <p>“Saida’s dedication to financial accuracy and humanitarian goals is inspiring. Her work ethic and attention to detail make her an invaluable asset.”</p>
+                <cite>— Munir Ahmad Fetrat, Finance Officer, IRC</cite>
+              </blockquote>
+            </div>
+            <div class="quote-card">
+              <blockquote>
+                <p>“Saida’s professionalism and teamwork shine in every project. She’s a reliable colleague who consistently delivers.”</p>
+                <cite>— Manizha Rahimi, HR Admin Assistant, IRC</cite>
+              </blockquote>
+            </div>
+            <div class="quote-card">
+              <blockquote>
+                <p>“Saida’s financial expertise and commitment to excellence elevated our operations significantly.”</p>
+                <cite>— Ruhullah Pirzada, Owner, Ruhullah Afghan Europe Logistic Services</cite>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section id="contact" class="card fade-in-on-scroll" aria-labelledby="contact-heading">
+          <h2 id="contact-heading"><span class="emoji">📞</span> Contact</h2>
+          <ul class="contact-list">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:saidaalimy100@gmail.com">saidaalimy100@gmail.com</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              +93 790302435
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <a href="https://linkedin.com/in/saida-alimy-b84732333" rel="noopener noreferrer">saida-alimy-b84732333</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Kunduz, Afghanistan
+            </li>
+          </ul>
+        </section>
+
+        <section class="card fade-in-on-scroll" aria-labelledby="message-heading">
+          <h2 id="message-heading">Message Me</h2>
+          <form id="contact-form" novalidate>
+            <input type="text" name="_gotcha" class="sr-only" aria-hidden="true" tabindex="-1">
+            <label for="name" class="sr-only">Your name</label>
+            <input name="name" id="name" type="text" placeholder="Your name" required aria-required="true">
+            <label for="email" class="sr-only">Your email</label>
+            <input name="email" id="email" type="email" placeholder="Your email" required aria-required="true">
+            <label for="message" class="sr-only">Your message</label>
+            <textarea name="message" id="message" placeholder="Your message" required aria-required="true"></textarea>
+            <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+              <button id="submit-btn" type="submit">Send</button>
+              <div id="form-status" class="form-status" aria-live="polite"></div>
+            </div>
+          </form>
+        </section>
+
+        <section class="card fade-in-on-scroll" aria-labelledby="education-heading">
+          <h2 id="education-heading"><span class="emoji">🎓</span> Education & Certs</h2>
+          <p><strong>BBA:</strong> Afghan Women International Online University <br /><small>(Mar 2025 — Present)</small></p>
+          <p><strong>Bachelor of English Language & Literature:</strong> Kunduz University <br /><small>(Mar 2016 — Apr 2021)</small></p>
+          <p><strong>Selected:</strong> QuickBooks Online, Financial Management Essentials, Procurement Process, Project Management, Accounting 101, Bookkeeping, Corporate Finance & Treasury, and more from USAID, IRC, DisasterReady.org, INCEIF University, The Open University, and THE ACT.</p>
+        </section>
+
+        <section class="card fade-in-on-scroll" aria-labelledby="references-heading">
+          <h2 id="references-heading"><span class="emoji">🤝</span> References</h2>
+          <p>References are available upon request.</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      Available for collaboration on humanitarian finance, NGO services, and impactful projects in Afghanistan.
+    </footer>
+  </div>
+  <script>
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xovlyvgp";
+    const form = document.getElementById("contact-form");
+    const statusEl = document.getElementById("form-status");
+    const submitBtn = document.getElementById("submit-btn");
+    const backToTopBtn = document.getElementById("back-to-top");
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const progressBar = document.getElementById("progress-bar");
+    const mainContent = document.getElementById("main-content");
+    const contactList = document.querySelector('.contact-list');
+    // Debounce function to limit the rate of function execution
+    const debounce = (func, delay) => {
+      let inDebounce;
+      return function() {
+        const context = this;
+        const args = arguments;
+        clearTimeout(inDebounce);
+        inDebounce = setTimeout(() => func.apply(context, args), delay);
+      };
+    };
+    // Load theme preference from localStorage or system preference
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      if (currentTheme === 'dark') {
+        themeToggleBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
+      }
+    }
+    themeToggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggleBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggleBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
+      }
+    });
+    const validateForm = () => {
+      const fields = [
+        document.getElementById("name"),
+        document.getElementById("email"),
+        document.getElementById("message")
+      ];
+      let isValid = true;
+      fields.forEach(field => {
+        if (!field.validity.valid) {
+          field.setAttribute("aria-invalid", "true");
+          isValid = false;
+        } else {
+          field.setAttribute("aria-invalid", "false");
+        }
+      });
+      return isValid;
+    }
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusEl.textContent = "";
+      if (!validateForm()) {
+        statusEl.innerHTML = '<span class="error" role="alert">Please fill in all required fields.</span>';
+        return;
+      }
+      const fd = new FormData(form);
+      if (fd.get("_gotcha")) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+      try {
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Accept": "application/json"
+          },
+          body: fd,
+        });
+        if (res.ok) {
+          statusEl.innerHTML = '<span class="success" role="alert">Thanks — message sent!</span>';
+          form.reset();
+        } else {
+          const data = await res.json().catch(() => null);
+          const errorMessage = (data && data.errors) ? data.errors.map((e) => e.message).join(", ") : "Submission failed — try later.";
+          statusEl.innerHTML = `<span class="error" role="alert">${errorMessage}</span>`;
+        }
+      } catch {
+        statusEl.innerHTML = '<span class="error" role="alert">Network error — try later.</span>';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send";
+        setTimeout(() => {
+          statusEl.textContent = "";
+        }, 8000);
+      }
+    });
+    document.querySelectorAll('a[href^="#"]').forEach((a) =>
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = a.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      })
+    );
+    const toggleBackToTop = debounce(() => {
+      if (window.scrollY > 200) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }, 100);
+    const updateProgressBar = debounce(() => {
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+      const progress = (scrolled / scrollableHeight) * 100;
+      progressBar.style.width = `${progress}%`;
+    }, 10);
+    window.addEventListener('scroll', () => {
+      toggleBackToTop();
+      updateProgressBar();
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Special case for the contact list to trigger its sequential fade-in
+          if (entry.target.querySelector('.contact-list')) {
+            entry.target.querySelector('.contact-list').classList.add('visible');
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    document.querySelectorAll('.fade-in-on-scroll').forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+
+</html>
